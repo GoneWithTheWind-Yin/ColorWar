@@ -33,8 +33,8 @@ public class BuildManager : MonoBehaviour
                     MapCube mapCube = hit.collider.GetComponent<MapCube>();
                     if (selectedTurretData != null && mapCube.turretGo == null) {
                         // 可以创建
-                        if (GetComponent<ManageMoney>().GetMoney() > selectedTurretData.cost) {
-                            GetComponent<ManageMoney>().ChangeMoney(-selectedTurretData.cost);
+                        if (GetComponent<GameManage>().GetMoney() > selectedTurretData.cost) {
+                            GetComponent<GameManage>().ChangeMoney(-selectedTurretData.cost);
                             mapCube.BuildTurret(selectedTurretData.turretPrefab);
                         } else {
                             // TODO 提示金钱不够
