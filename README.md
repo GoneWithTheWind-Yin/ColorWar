@@ -11,7 +11,8 @@ Instead of destroying the enemy, the defense tower can randomly change the enemy
 Build defense towers to shoot the enemy and change its color. Lock the enemy’s color once it is the same as the Base’s color. Protect the Base from HP reducing to 0.
 
 ## Prototype Design
-![Map](Map_Prototype.png)
+![Map](UI.png)
+![Fail](Fail.png)
 ### Map:
 The map of this game consists of grids and a route. The route is for enemies to move, and the grid is the place where players can put towers to attack enemies. Enemies will be generated at the start point of the route, and the Base is at the end point of the route. 
 
