@@ -7,7 +7,7 @@ public class GameManage : MonoBehaviour {
     public Text moneyText;
     public Text hpText;
 
-    public static int money = 100;
+    public static int money = 200;
     public static int HP = 10;
 
     public GameObject endUI;
