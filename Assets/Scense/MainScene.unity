@@ -8510,7 +8510,7 @@ MonoBehaviour:
     cost: 60
     turretUpgradedPrefab: {fileID: 5345569198702460044, guid: fb148cfda613047278f94eb5fa6f5941, type: 3}
     costUpgraded: 40
-    type: 2
+    type: 0
   missileTurretData:
     turretPrefab: {fileID: 4361989944778579430, guid: 9bb7fd11ebe0d4daa9cd267576cb8476, type: 3}
     cost: 40
@@ -8522,13 +8522,7 @@ MonoBehaviour:
     cost: 20
     turretUpgradedPrefab: {fileID: 5314222728871408805, guid: 1216d3e71f80641cfa6a28cadd04c78c, type: 3}
     costUpgraded: 20
-    type: 0
-  selectedTurretData:
-    turretPrefab: {fileID: 0}
-    cost: 0
-    turretUpgradedPrefab: {fileID: 0}
-    costUpgraded: 0
-    type: 0
+    type: 2
 --- !u!114 &2050873234
 MonoBehaviour:
   m_ObjectHideFlags: 0
