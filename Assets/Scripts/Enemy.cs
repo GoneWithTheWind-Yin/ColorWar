@@ -73,7 +73,9 @@ public class Enemy : MonoBehaviour
     }
 
     public void ChangeColor(Color color) {
-        this.gameObject.GetComponent<Renderer>().material.color=color;
+		if (status == 0) {
+			this.gameObject.GetComponent<Renderer>().material.color=color;
+		}
     }
 
     public bool CheckStatus() {
