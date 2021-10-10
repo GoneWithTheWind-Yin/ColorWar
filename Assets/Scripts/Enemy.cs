@@ -59,10 +59,10 @@ public class Enemy : MonoBehaviour
         // 现阶段默认基地颜色为绿色
         Color baseColor = new Color(0, 1, 0, 1);
         if (this.gameObject.GetComponent<Renderer>().material.color == baseColor) {
-            GameManage.Bouns(10);
+			GameManage.GetGameManage().Bouns(10);
         } else {
             // 掉血
-            GameManage.Damage(1);
+			GameManage.GetGameManage().Damage(1);
         }
 
         GameObject.Destroy(this.gameObject);
