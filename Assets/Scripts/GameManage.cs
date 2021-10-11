@@ -54,14 +54,14 @@ public class GameManage : MonoBehaviour {
     }
 
     public void Win() {
-        Time.timeScale = 0;
+        // Time.timeScale = 0;
         endMessage.text = "WIN";
         endUI.SetActive(true);
     }
 
     public void Fail() {
         enemySpawner.Stop();
-        Time.timeScale = 0;
+        // Time.timeScale = 0;
         endMessage.text = "GAME OVER";
         endUI.SetActive(true);
     }
