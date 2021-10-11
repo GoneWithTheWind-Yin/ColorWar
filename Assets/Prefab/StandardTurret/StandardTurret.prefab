@@ -205,7 +205,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 20
+  m_Radius: 7.5
   m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!114 &4143781089688965309
 MonoBehaviour:
@@ -219,8 +219,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99b86e7443f5f48459dff067f3a359d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemys: []
-  attackRateTime: 2
+  attackList: []
+  bulletLoadingTime: 2
   timer: 0
   bulletPrefabList:
   - {fileID: 7609227274577388263, guid: a17ce46d29ce14308b03dbdd2844ed30, type: 3}
