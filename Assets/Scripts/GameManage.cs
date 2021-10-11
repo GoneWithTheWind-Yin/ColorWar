@@ -9,7 +9,7 @@ public class GameManage : MonoBehaviour {
     public Text hpText;
 
     public int money = 200;
-    public int HP = 3;
+    public int HP = 5;
 
     public GameObject endUI;
     public Text endMessage;

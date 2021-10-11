@@ -9,7 +9,8 @@ public class Enemy : MonoBehaviour
 
     private Transform[] positions;
     private int index = 0;
-    public int status = 0;
+	public GameObject L;
+	public bool isLocked = false;
 
 	// Use this for initialization
 	void Start () {
@@ -20,7 +21,7 @@ public class Enemy : MonoBehaviour
 	// Update is called once per frame
 	void Update () {
         Move();
-        Lock();
+        //Lock();
 	}
 
     void Lock() {
@@ -34,7 +35,8 @@ public class Enemy : MonoBehaviour
                 if (isCollider) {
                     Enemy enemy = hit.collider.GetComponent<Enemy>();
                     // status为1的时候代表锁定，此时炮台不应该攻击，颜色也不会发生改变
-                    enemy.status ^= 1;
+					enemy.isLocked = !enemy.isLocked;
+					enemy.L.SetActive(enemy.isLocked);
                 }
             }
         }
@@ -73,12 +75,17 @@ public class Enemy : MonoBehaviour
     }
 
     public void ChangeColor(Color color) {
-		if (status == 0) {
+		if (!isLocked) {
 			this.gameObject.GetComponent<Renderer>().material.color=color;
 		}
     }
 
-    public bool CheckStatus() {
-        return this.status == 0;
+    public bool IsLocked() {
+        return isLocked;
     }
+
+	void OnMouseDown() {
+		isLocked = !isLocked;
+		L.SetActive(isLocked);
+	}
 }

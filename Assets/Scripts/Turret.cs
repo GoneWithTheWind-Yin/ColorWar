@@ -42,8 +42,8 @@ public class Turret : MonoBehaviour
 		GameObject enemy = null;
 		for (int i = 0; i < attackList.Count; ++i) {
 			GameObject temp = attackList[i];
-			bool isUnlocked = temp.GetComponent<Enemy>().CheckStatus();
-			if (isUnlocked) {
+			bool isLocked = temp.GetComponent<Enemy>().IsLocked();
+			if (!isLocked) {
 				enemy = attackList[i];
 				break;
 			}
