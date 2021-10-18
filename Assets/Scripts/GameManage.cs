@@ -123,7 +123,7 @@ public class GameManage : MonoBehaviour {
     // 1
     private void ReportCostedMoney() {
         Debug.Log("Money Costed: " + moneyCosted);
-        Analytics.CustomEvent("Test3", new Dictionary<string, object>
+        Analytics.CustomEvent(sceneName + " win", new Dictionary<string, object>
         {
             { "Money Costed", moneyCosted }
         });
@@ -132,7 +132,7 @@ public class GameManage : MonoBehaviour {
     // 2
     private void ReportEarnedMoney() {
         Debug.Log("Money Earned: " + moneyEarned);
-        Analytics.CustomEvent("Test3", new Dictionary<string, object>
+        Analytics.CustomEvent(sceneName + " win", new Dictionary<string, object>
         {
             { "Money Earned", moneyEarned }
         });
@@ -148,7 +148,7 @@ public class GameManage : MonoBehaviour {
         Debug.Log("Missile Turret: " + numOfMissile);
         Debug.Log("Laser Turret: " + numofLaser);
 
-        Analytics.CustomEvent("Test3", new Dictionary<string, object>
+        Analytics.CustomEvent(sceneName + " win", new Dictionary<string, object>
         {
             { "Standard Turret", numOfStandard},
             { "Missile Turret", numOfMissile},
@@ -159,7 +159,7 @@ public class GameManage : MonoBehaviour {
     //4
     private void ReportTotalColorNotChangeTimes() {
         Debug.Log("Color Not Changed Times: " + totalColorNotChangeTimes);
-        Analytics.CustomEvent("Test3", new Dictionary<string, object>
+        Analytics.CustomEvent(sceneName + " general", new Dictionary<string, object>
         {
             { "Color Not Changed Times", totalColorNotChangeTimes }
         });
@@ -169,7 +169,7 @@ public class GameManage : MonoBehaviour {
     private void ReportGameResults() {
         string result = win ? "Win Times" : "Fail Times";
         Debug.Log(result);
-        Analytics.CustomEvent("Test3", new Dictionary<string, object>
+        Analytics.CustomEvent(sceneName + " general", new Dictionary<string, object>
          {
              {"Total Times", 1},
              {result, 1},
@@ -190,7 +190,7 @@ public class GameManage : MonoBehaviour {
         }
 
         Debug.Log("Mouse Click Miss Rate: " + mouseMissingRate);
-        Analytics.CustomEvent("Test3", new Dictionary<string, object>
+        Analytics.CustomEvent(sceneName + " general", new Dictionary<string, object>
          {
              { "Mouse Click Miss Rate", mouseMissingRate }
          });
@@ -199,7 +199,7 @@ public class GameManage : MonoBehaviour {
     // 7
     private void ReportRemainingHP() {
         Debug.Log("HP: " + HP);
-        Analytics.CustomEvent("Test3", new Dictionary<string, object>
+        Analytics.CustomEvent(sceneName + " win", new Dictionary<string, object>
          {
              { "HP", HP }
          });
@@ -208,7 +208,7 @@ public class GameManage : MonoBehaviour {
     // 8
     private void ReportReplayTimesAfterWin() {
         Debug.Log("Replay After Win");
-        Analytics.CustomEvent("Test3", new Dictionary<string, object>
+        Analytics.CustomEvent(sceneName + " win", new Dictionary<string, object>
          {
              { "Replay Times After Win", 1}
          });
@@ -216,7 +216,7 @@ public class GameManage : MonoBehaviour {
     private void ReportReplayTimesAfterFail()
     {
         Debug.Log("Replay After Fail");
-        Analytics.CustomEvent("Test3", new Dictionary<string, object>
+        Analytics.CustomEvent(sceneName + " fail", new Dictionary<string, object>
          {
              { "Replay Times After Fail", 1},
          });
@@ -227,7 +227,7 @@ public class GameManage : MonoBehaviour {
     {
         int wave = EnemySpawner.GetWave();
         Debug.Log("Failed Wave: " + wave);
-        Analytics.CustomEvent("Test3", new Dictionary<string, object>
+        Analytics.CustomEvent(sceneName + " fail", new Dictionary<string, object>
          {
              {"Failed Wave", wave}
          });
@@ -236,7 +236,7 @@ public class GameManage : MonoBehaviour {
     // 10
     private void ReportFailedTime() {
         Debug.Log("Failed Time: " + timer);
-        Analytics.CustomEvent("Test3", new Dictionary<string, object>
+        Analytics.CustomEvent(sceneName + " fail", new Dictionary<string, object>
          {
              {"Failed Time", timer}
          });
