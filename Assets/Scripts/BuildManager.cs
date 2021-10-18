@@ -13,6 +13,10 @@ public class BuildManager : MonoBehaviour
     // 表示选择创建的Turret
     private TurretData selectedTurretData;
 
+    private int numOfStandard = 0;
+    private int numOfMissile = 0;
+    private int numOfLaser = 0;
+
     // public Text moneyText;
 
     // public int money = 100;
@@ -34,8 +38,9 @@ public class BuildManager : MonoBehaviour
                     if (selectedTurretData != null && mapCube.turretGo == null) {
                         // 可以创建
                         if (GetComponent<GameManage>().GetMoney() >= selectedTurretData.cost) {
-                            GetComponent<GameManage>().ChangeMoney(-selectedTurretData.cost);
+                            GetComponent<GameManage>().DeductMoney(selectedTurretData.cost);
                             mapCube.BuildTurret(selectedTurretData.turretPrefab);
+                            UpdateNumOfTurret(selectedTurretData);
                         } else {
                             // TODO 提示金钱不够
                         }
@@ -65,4 +70,29 @@ public class BuildManager : MonoBehaviour
         }
     }
 
+    private void UpdateNumOfTurret(TurretData selectedTurretData) {
+        if (selectedTurretData.type == TurretType.StandardTurret)
+        {
+            numOfStandard++;
+        }
+        else if (selectedTurretData.type == TurretType.MissileTurret)
+        {
+            numOfMissile++;
+        }
+        else if (selectedTurretData.type == TurretType.LaserTurret) {
+            numOfLaser++;
+        }
+    }
+
+    public int GetNumOfStandard() {
+        return numOfStandard;
+    }
+
+    public int GetNumOfMissile() {
+        return numOfMissile;
+    }
+
+    public int GetNumOfLaser() {
+        return numOfLaser;
+    }
 }

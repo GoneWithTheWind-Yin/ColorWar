@@ -50,9 +50,12 @@ public class Turret : MonoBehaviour
 		}
 
 		if (enemy != null) {
-			Vector3 targetPosition = enemy.transform.position;
-			targetPosition.y = head.position.y;
-			head.LookAt(targetPosition);
+			// TODO currently only support standard turret
+			if (head != null) {
+				Vector3 targetPosition = enemy.transform.position;
+				targetPosition.y = head.position.y;
+				head.LookAt(targetPosition);
+			}
 
 			// 生成子弹的逻辑也要改为集合中存在未被锁定的敌人
 			if (timer >= bulletLoadingTime) {
@@ -70,7 +73,10 @@ public class Turret : MonoBehaviour
 			return false;
 		}
 
-        // 可以设置不同的bullet的prefab，搞成一个list去在里面遍历
+		// TODO currently only support standard turret
+		if (bulletPrefabList.Count == 0) {
+			return false;
+		}
         GameObject bullet = GameObject.Instantiate(bulletPrefabList[times], firePosition.position, firePosition.rotation);
         times++;
         times %= bulletPrefabList.Count;

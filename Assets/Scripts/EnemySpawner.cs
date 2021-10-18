@@ -8,6 +8,7 @@ public class EnemySpawner : MonoBehaviour
     public Transform START;
     public float waveRate = 1;
     public static int CountEnemyAlive = 0;
+    public static int currentWave = 0;
 
     void Start() {
         StartCoroutine("SpawnEnemy");
@@ -18,7 +19,9 @@ public class EnemySpawner : MonoBehaviour
     }
 
     IEnumerator SpawnEnemy() {
-        foreach(Wave wave in waves) {
+        currentWave = 0;
+        foreach (Wave wave in waves) {
+            currentWave++;
             for (int i = 0; i < wave.count; ++i) {
                 GameObject.Instantiate(wave.enemyPrefab, START.position, Quaternion.identity);
                 CountEnemyAlive++;
@@ -35,6 +38,10 @@ public class EnemySpawner : MonoBehaviour
             yield return 0;
         }
         GameManage.Instance.Win();
+    }
+
+    public static int GetWave() {
+        return currentWave;
     }
 
 }

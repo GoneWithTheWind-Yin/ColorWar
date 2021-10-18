@@ -11,10 +11,14 @@ public class Enemy : MonoBehaviour
     private int index = 0;
 	public GameObject L;
 	public bool isLocked = false;
+    public GameManage gameManage;
+    private bool colorIsChanged;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         positions = Waypoints.positions;
+        gameManage = GameManage.GetGameManage();
+        colorIsChanged = false;
 	}
 
 	
@@ -61,12 +65,15 @@ public class Enemy : MonoBehaviour
         // 现阶段默认基地颜色为绿色
         Color baseColor = new Color(0, 1, 0, 1);
         if (this.gameObject.GetComponent<Renderer>().material.color == baseColor) {
-			GameManage.GetGameManage().Bouns(10);
+			GameManage.GetGameManage().EarnMoney(10);
         } else {
             // 掉血
 			GameManage.GetGameManage().Damage(1);
         }
 
+        if (!colorIsChanged) {
+            gameManage.UpdateTotalColorNotChangeTimes();
+        }
         GameObject.Destroy(this.gameObject);
     }
 
@@ -75,6 +82,7 @@ public class Enemy : MonoBehaviour
     }
 
     public void ChangeColor(Color color) {
+        colorIsChanged = true;
 		if (!isLocked) {
 			this.gameObject.GetComponent<Renderer>().material.color=color;
 		}
@@ -85,7 +93,8 @@ public class Enemy : MonoBehaviour
     }
 
 	void OnMouseDown() {
-		isLocked = !isLocked;
+        gameManage.UpdateNoMissMouseDownTimes();
+        isLocked = !isLocked;
 		L.SetActive(isLocked);
 	}
 }
