@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2725,7 +2725,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: $200
+  m_Text: $100
 --- !u!222 &729024511
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2998,7 +2998,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: $20
+  m_Text: $25
 --- !u!222 &790486916
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5217,7 +5217,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 148}
+  m_AnchoredPosition: {x: 0, y: -20}
   m_SizeDelta: {x: 170, y: 170}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1261040302
@@ -7045,7 +7045,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -40, y: -22}
+  m_AnchoredPosition: {x: -40, y: 148}
   m_SizeDelta: {x: 170, y: 170}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1752674858
@@ -7793,7 +7793,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: $40
+  m_Text: $100
 --- !u!222 &1905040410
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8611,16 +8611,16 @@ MonoBehaviour:
   waves:
   - enemyPrefab: {fileID: 4409569278764533620, guid: 1bafa47be57a84bf1bc7e2a681082976, type: 3}
     count: 3
-    rate: 1
+    rate: 2
   - enemyPrefab: {fileID: 4409569278764533620, guid: 2690222ec9687485d9ce43630fc1b2e8, type: 3}
     count: 4
-    rate: 0.8
+    rate: 2
   - enemyPrefab: {fileID: 4409569278764533620, guid: 02926b115e3fb4c7c89448406df4e8c9, type: 3}
-    count: 6
-    rate: 0.7
+    count: 5
+    rate: 1.8
   - enemyPrefab: {fileID: 4409569278764533620, guid: 633432e0b26bd4aef98eb2a22c87ec72, type: 3}
-    count: 8
-    rate: 0.6
+    count: 6
+    rate: 1.6
   START: {fileID: 1852512994}
   waveRate: 0.2
 --- !u!4 &2050873232
@@ -8651,13 +8651,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laserTurretData:
     turretPrefab: {fileID: 1344915641042977326, guid: 5a6c9748c0dca4d14a1bd69e1771fc49, type: 3}
-    cost: 60
+    cost: 40
     turretUpgradedPrefab: {fileID: 5345569198702460044, guid: fb148cfda613047278f94eb5fa6f5941, type: 3}
     costUpgraded: 40
     type: 0
   missileTurretData:
     turretPrefab: {fileID: 4361989944778579430, guid: 9bb7fd11ebe0d4daa9cd267576cb8476, type: 3}
-    cost: 40
+    cost: 70
     turretUpgradedPrefab: {fileID: 4361989944778579430, guid: 54e0a206ecc9943fe95c954e112731c5, type: 3}
     costUpgraded: 30
     type: 1
@@ -8681,8 +8681,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moneyText: {fileID: 729024510}
   hpText: {fileID: 876126877}
-  money: 200
-  HP: 10
+  money: 100
+  HP: 5
   endUI: {fileID: 427822107}
   endMessage: {fileID: 1595703678}
 --- !u!1 &2051523940

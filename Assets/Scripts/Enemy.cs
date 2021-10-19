@@ -7,6 +7,8 @@ public class Enemy : MonoBehaviour
 {
     public float speed = 10;
 
+    public float originSpeed = 10;
+
     private Transform[] positions;
     private int index = 0;
 	public GameObject L;
@@ -14,18 +16,27 @@ public class Enemy : MonoBehaviour
     public GameManage gameManage;
     private bool colorIsChanged;
 
+    public bool isSlowed = false;
+    public int num1 = 0;
+    public int num2 = 0;
+
     // Use this for initialization
     void Start () {
         positions = Waypoints.positions;
         gameManage = GameManage.GetGameManage();
         colorIsChanged = false;
+        originSpeed = speed;
 	}
 
 	
 	// Update is called once per frame
 	void Update () {
+        if (num1 == num2) {
+            RestoreSpeed();
+        } else {
+            num2 = num1;
+        }
         Move();
-        //Lock();
 	}
 
     void Lock() {
@@ -92,9 +103,25 @@ public class Enemy : MonoBehaviour
         return isLocked;
     }
 
+    public bool IsSlowed() {
+        return isSlowed;
+    }
+
 	void OnMouseDown() {
         gameManage.UpdateNoMissMouseDownTimes();
         isLocked = !isLocked;
 		L.SetActive(isLocked);
 	}
+
+    public void ChangeSpeed(float num) {
+        speed = num;
+        num1++;
+        num %= 1000000007;
+        isSlowed = true;
+    }
+
+    public void RestoreSpeed() {
+        speed = originSpeed;
+        isSlowed = false;
+    }
 }

@@ -13,8 +13,8 @@ public class GameManage : MonoBehaviour {
     public Text moneyText;
     public Text hpText;
 
-    public int money = 100;
-    public int HP = 5;
+    public int money = 200;
+    public int HP = 10;
     private int moneyCosted = 0;
     private int moneyEarned = 0;
     private bool win = false;
@@ -258,6 +258,6 @@ public class GameManage : MonoBehaviour {
             ReportFailedWave();
             ReportFailedTime();
         }
-    }
 #endif
+    }
 }
