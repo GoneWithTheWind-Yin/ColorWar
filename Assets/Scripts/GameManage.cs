@@ -20,7 +20,8 @@ public class GameManage : MonoBehaviour {
     private bool win = false;
     private int totalColorNotChangeTimes = 0;
 
-    public GameObject endUI;
+    public GameObject endUIWin;
+    public GameObject endUIFail;
     public Text endMessage;
     private EnemySpawner enemySpawner;
     private BuildManager buildManager;
@@ -93,7 +94,7 @@ public class GameManage : MonoBehaviour {
         isOver = true;
         SendMessage();
         endMessage.text = "YOU WIN!!!";
-        endUI.SetActive(true);
+        endUIWin.SetActive(true);
     }
 
     public void Fail() {
@@ -102,7 +103,7 @@ public class GameManage : MonoBehaviour {
         SendMessage();
         enemySpawner.Stop();
         endMessage.text = "YOU FAIL...";
-        endUI.SetActive(true);
+        endUIFail.SetActive(true);
     }
 
     public void OnButtonReplay() {
@@ -117,8 +118,15 @@ public class GameManage : MonoBehaviour {
 	}
 
 	public void OnButtonMenu() {
-		// TODO
-	}
+        SceneManager.LoadScene(0);
+    }
+
+    public void OnButtonNextLevel() {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        if (currentSceneIndex < SceneManager.sceneCountInBuildSettings - 1) {
+            SceneManager.LoadScene(currentSceneIndex + 1);
+        }
+    }
 
     // 1
     private void ReportCostedMoney() {

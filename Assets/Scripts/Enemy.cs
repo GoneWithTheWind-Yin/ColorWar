@@ -73,8 +73,7 @@ public class Enemy : MonoBehaviour
 
     void ReachDestination() {
         // 如果颜色一致的话进行加分操作 如果颜色不一致的话进行扣分操作
-        // 现阶段默认基地颜色为绿色
-        Color baseColor = new Color(0, 1, 0, 1);
+        Color baseColor = Base.GetBase().GetBaseColor();
         if (this.gameObject.GetComponent<Renderer>().material.color == baseColor) {
 			GameManage.GetGameManage().EarnMoney(10);
         } else {

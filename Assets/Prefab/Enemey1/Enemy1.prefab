@@ -109,10 +109,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aeac4d354de224ef3a67a8e6f26cd801, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
-  status: 0
+  speed: 10
+  originSpeed: 10
   L: {fileID: 8766048732008897850}
   isLocked: 0
+  gameManage: {fileID: 0}
+  isSlowed: 0
+  num1: 0
+  num2: 0
 --- !u!1 &8766048732008897850
 GameObject:
   m_ObjectHideFlags: 0
