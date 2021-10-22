@@ -17,6 +17,10 @@ public class BuildManager : MonoBehaviour
     private int numOfMissile = 0;
     private int numOfLaser = 0;
 
+    private GameObject selectedTurretGo;//表示当前选择的炮台（场景中的物体）
+    private Animator destroyCanvasAnimator;
+
+
     // public Text moneyText;
 
     // public int money = 100;
@@ -25,6 +29,14 @@ public class BuildManager : MonoBehaviour
     //     money += change;
     //     moneyText.text = "" + money;
     // }
+
+    public GameObject destroyCanvas;
+    public Button buttonDestroy;
+
+    void Start()
+    {
+        destroyCanvasAnimator = destroyCanvas.GetComponent<Animator>();
+    }
 
     void Update() {
         if (Input.GetMouseButtonDown(0)) {
@@ -45,7 +57,16 @@ public class BuildManager : MonoBehaviour
                             // TODO 提示金钱不够
                         }
 					} else if (mapCube.turretGo != null){
-                        // TODO 升级处理
+                        
+                       // if(mapCube.turretGo == selectedTurretGo && destroyCanvas.activeInHierarchy)
+                      //  {
+                      //      StartCoroutine(HideDestroyUI());
+                    //    }
+                    //    else
+                    //    {
+                    //        ShowDestroyUI(mapCube.transform.position);
+                   //     }
+                   //     selectedTurretGo = mapCube.turretGo;
                     }
                 }
             }
@@ -95,4 +116,28 @@ public class BuildManager : MonoBehaviour
     public int GetNumOfLaser() {
         return numOfLaser;
     }
+
+    void ShowDestroyUI(Vector3 pos)
+    {
+        StopCoroutine("HideDestroyUI");
+        destroyCanvas.SetActive(false);
+        destroyCanvas.SetActive(true);
+        destroyCanvas.transform.position = pos;
+        buttonDestroy.interactable = true;
+    }
+
+    IEnumerator HideDestroyUI()
+    {
+        destroyCanvasAnimator.SetTrigger("Hide");
+        yield return new WaitForSeconds(0.8f);
+        destroyCanvas.SetActive(false);
+
+    }
+
+    public void OnDestroyButtonDown()
+    {
+
+    }
+
+
 }
