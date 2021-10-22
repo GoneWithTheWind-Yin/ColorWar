@@ -30,6 +30,8 @@ public class BuildManager : MonoBehaviour
     //     moneyText.text = "" + money;
     // }
 
+    public Animator moneyAnimator;
+
     public GameObject destroyCanvas;
     public Button buttonDestroy;
 
@@ -55,6 +57,7 @@ public class BuildManager : MonoBehaviour
                             UpdateNumOfTurret(selectedTurretData);
                         } else {
                             // TODO 提示金钱不够
+                            moneyAnimator.SetTrigger("Flicker");
                         }
 					} else if (mapCube.turretGo != null){
                         

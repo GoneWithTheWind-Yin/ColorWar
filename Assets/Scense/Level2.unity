@@ -16797,7 +16797,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laserTurretData:
     turretPrefab: {fileID: 1344915641042977326, guid: 5a6c9748c0dca4d14a1bd69e1771fc49, type: 3}
-    cost: 40
+    cost: 60
     turretUpgradedPrefab: {fileID: 5345569198702460044, guid: fb148cfda613047278f94eb5fa6f5941, type: 3}
     costUpgraded: 40
     type: 0
@@ -16813,6 +16813,7 @@ MonoBehaviour:
     turretUpgradedPrefab: {fileID: 5314222728871408805, guid: 1216d3e71f80641cfa6a28cadd04c78c, type: 3}
     costUpgraded: 20
     type: 2
+  moneyAnimator: {fileID: 729024512}
   destroyCanvas: {fileID: 1123832745}
   buttonDestroy: {fileID: 1671372473}
 --- !u!114 &2050873234
