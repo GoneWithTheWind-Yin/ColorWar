@@ -8,6 +8,8 @@ public class Bullet : MonoBehaviour {
 
     public float speed = 20;
 
+    public bool isMissile = false;
+
     private Transform target;
 
     private float distanceArriveTarget = 1.2f;
@@ -28,8 +30,12 @@ public class Bullet : MonoBehaviour {
 
         Vector3 dir = target.position - transform.position;
         if (dir.magnitude < distanceArriveTarget) {
-            // 改颜色，把原本的伤害更改为颜色
-            target.GetComponent<Enemy>().ChangeColor(this.gameObject.GetComponent<Renderer>().material.color);
+            if (isMissile) {
+                target.GetComponent<Enemy>().ChangeColor(GetComponent<Base>().GetBaseColor());
+            } else {
+                // 改颜色，把原本的伤害更改为颜色
+                target.GetComponent<Enemy>().ChangeColor(this.gameObject.GetComponent<Renderer>().material.color);
+            }
             Destroy(this.gameObject);
         }
     }
