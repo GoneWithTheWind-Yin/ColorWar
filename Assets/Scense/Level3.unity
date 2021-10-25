@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -17388,18 +17388,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - enemyPrefab: {fileID: 4409569278764533620, guid: 1bafa47be57a84bf1bc7e2a681082976, type: 3}
-    count: 3
-    rate: 2
   - enemyPrefab: {fileID: 4409569278764533620, guid: 2690222ec9687485d9ce43630fc1b2e8, type: 3}
-    count: 4
-    rate: 2
-  - enemyPrefab: {fileID: 4409569278764533620, guid: 02926b115e3fb4c7c89448406df4e8c9, type: 3}
+    count: 3
+    rate: 1.6
+  - enemyPrefab: {fileID: 4409569278764533620, guid: 2690222ec9687485d9ce43630fc1b2e8, type: 3}
     count: 5
-    rate: 1.8
+    rate: 1.4
   - enemyPrefab: {fileID: 4409569278764533620, guid: 633432e0b26bd4aef98eb2a22c87ec72, type: 3}
     count: 6
-    rate: 1.6
+    rate: 1.2
+  - enemyPrefab: {fileID: 4409569278764533620, guid: 633432e0b26bd4aef98eb2a22c87ec72, type: 3}
+    count: 8
+    rate: 1
   START: {fileID: 1852512994}
   waveRate: 0.2
 --- !u!4 &2050873232
