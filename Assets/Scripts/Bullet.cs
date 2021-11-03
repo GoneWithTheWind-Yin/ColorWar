@@ -31,7 +31,7 @@ public class Bullet : MonoBehaviour {
         Vector3 dir = target.position - transform.position;
         if (dir.magnitude < distanceArriveTarget) {
             if (isMissile) {
-                target.GetComponent<Enemy>().ChangeColor(GetComponent<Base>().GetBaseColor());
+                target.GetComponent<Enemy>().ChangeColor(Base.GetBase().GetBaseColor());
             } else {
                 // 改颜色，把原本的伤害更改为颜色
                 target.GetComponent<Enemy>().ChangeColor(this.gameObject.GetComponent<Renderer>().material.color);

@@ -192,7 +192,7 @@ MonoBehaviour:
   bulletLoadingTime: 5
   timer: 0
   bulletPrefabList:
-  - {fileID: 7609227274577388263, guid: 27452879b371349e691aa8c90dfb7819, type: 3}
+  - {fileID: 2013213883091877644, guid: b976a71df7f444c24a4eece62d0325bc, type: 3}
   firePosition: {fileID: 3671325026847533501}
   times: 0
   head: {fileID: 5363859472202862632}
