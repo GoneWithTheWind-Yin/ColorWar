@@ -123,4 +123,10 @@ public class Enemy : MonoBehaviour
         speed = originSpeed;
         isSlowed = false;
     }
+    public void Frozen() { 
+    }
+    public void Transport() {
+        index = 0;
+        transform.position = positions[index].position;
+    }
 }
