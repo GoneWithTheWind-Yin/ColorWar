@@ -17,6 +17,7 @@ public class Enemy : MonoBehaviour
     private bool colorIsChanged;
 
     public bool isSlowed = false;
+
     public int num1 = 0;
     public int num2 = 0;
 
@@ -31,11 +32,18 @@ public class Enemy : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update () {
-        if (num1 == num2) {
-            RestoreSpeed();
-        } else {
-            num2 = num1;
+        if (isSlowed)
+        {
+            if (num1 == num2)
+            {
+                RestoreSpeed();
+            }
+            else
+            {
+                num2 ++;
+            }
         }
+
         Move();
 	}
 
@@ -123,7 +131,10 @@ public class Enemy : MonoBehaviour
         speed = originSpeed;
         isSlowed = false;
     }
-    public void Frozen() { 
+    public void Frozen() {
+        speed = 0;
+        num1 += 3000;
+        isSlowed = true;
     }
     public void Transport() {
         index = 0;

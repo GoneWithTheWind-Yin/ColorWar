@@ -21,18 +21,9 @@ public class FrozenProp : MonoBehaviour
         {
             GameObject enemy = col.gameObject;
             enemy.GetComponent<Enemy>().Frozen();
-           // affectList.Add(enemy);
         }
     }
 
-    /* public void OnTriggerExit(Collider col)
-    {
-        if (col.tag == "Enemy")
-        {
-            affectList.Remove(col.gameObject);
-        }
-    }
-    */
     // Update is called once per frame
     void Update()
     {
@@ -52,12 +43,7 @@ public class FrozenProp : MonoBehaviour
         return this.propData;
     }
     void propFinish() {
-        /*
-        foreach (GameObject ememy in affectList)
-        {
-            ememy.GetComponent<Enemy>().RestoreSpeed();
-        }
-        */
+
         GameObject.Destroy(this.gameObject);
     }
 }

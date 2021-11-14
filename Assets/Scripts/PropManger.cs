@@ -13,9 +13,12 @@ public class PropManger : MonoBehaviour
     private bool isUse = false;
 
     public PropCD TransportationCD;
+    public PropCD FrozenCD;
+
     private void Start()
     {
         TransportationCD.setCD(TransportationPropData.CD);
+        FrozenCD.setCD(FrozenPropData.CD);
     }
 
     void Update()
@@ -49,8 +52,12 @@ public class PropManger : MonoBehaviour
     }
     public void OnFrozenSelected()
     {
-        isUse = true;
-        selectedPropData = FrozenPropData;
+        if (FrozenCD.canUsed())
+        {
+            isUse = true;
+            selectedPropData = FrozenPropData;
+            FrozenCD.skillUsed();
+        }
     }
 
     public void OnTransportationSelected()
