@@ -7,7 +7,7 @@ public class MapCube : MonoBehaviour
 {
     [HideInInspector]
     public GameObject turretGo;
-
+    private TurretData turretData;
     public GameObject buildEffect;
 
     private Renderer renderer;
@@ -17,10 +17,19 @@ public class MapCube : MonoBehaviour
         renderer = GetComponent<Renderer>();
     }
 
-    public void BuildTurret(GameObject turretPrefab) {
-        turretGo = GameObject.Instantiate(turretPrefab, transform.position, Quaternion.identity);
+    public void BuildTurret(TurretData turretData) {
+        this.turretData = turretData;
+        turretGo = GameObject.Instantiate(turretData.turretPrefab, transform.position, Quaternion.identity);
         GameObject effect = GameObject.Instantiate(buildEffect, transform.position, Quaternion.identity);
         Destroy(effect, 1);
+    }
+
+
+    public void DestroyTurret()
+    {
+        Destroy(turretGo);
+        turretGo = null;
+        turretData = null;
     }
 
     void OnMouseEnter()

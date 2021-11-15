@@ -17,7 +17,7 @@ public class BuildManager : MonoBehaviour
     private int numOfMissile = 0;
     private int numOfLaser = 0;
 
-    private GameObject selectedTurretGo;//表示当前选择的炮台（场景中的物体）
+    private MapCube selectedMapCube;//表示当前选择的炮台（场景中的物体）
     private Animator destroyCanvasAnimator;
 
 
@@ -53,23 +53,22 @@ public class BuildManager : MonoBehaviour
                         // 可以创建
                         if (GetComponent<GameManage>().GetMoney() >= selectedTurretData.cost) {
                             GetComponent<GameManage>().DeductMoney(selectedTurretData.cost);
-                            mapCube.BuildTurret(selectedTurretData.turretPrefab);
+                            mapCube.BuildTurret(selectedTurretData);
                             UpdateNumOfTurret(selectedTurretData);
                         } else {
                             // TODO 提示金钱不够
                             moneyAnimator.SetTrigger("Flicker");
                         }
 					} else if (mapCube.turretGo != null){
-                        
-                       // if(mapCube.turretGo == selectedTurretGo && destroyCanvas.activeInHierarchy)
-                      //  {
-                      //      StartCoroutine(HideDestroyUI());
-                    //    }
-                    //    else
-                    //    {
-                    //        ShowDestroyUI(mapCube.transform.position);
-                   //     }
-                   //     selectedTurretGo = mapCube.turretGo;
+                        if(mapCube == selectedMapCube && destroyCanvas.activeInHierarchy)
+                        {
+                            StartCoroutine(HideDestroyUI());
+                        }
+                        else
+                        {
+                            ShowDestroyUI(mapCube.transform.position);
+                        }
+                        selectedMapCube = mapCube;
                     }
                 }
             }
@@ -139,7 +138,10 @@ public class BuildManager : MonoBehaviour
 
     public void OnDestroyButtonDown()
     {
-
+        //Debug.Log("OnDe");
+        selectedMapCube.DestroyTurret();
+        GetComponent<GameManage>().EarnMoney(selectedTurretData.cost / 2 );
+        StartCoroutine(HideDestroyUI());
     }
 
 
