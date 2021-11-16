@@ -27,6 +27,7 @@ public class MapCube : MonoBehaviour
 
     public void DestroyTurret()
     {
+        Debug.Log("destroy turret");
         Destroy(turretGo);
         turretGo = null;
         turretData = null;

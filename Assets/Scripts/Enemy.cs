@@ -32,16 +32,15 @@ public class Enemy : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update () {
-        if (isSlowed)
+        
+           
+        if (num1 == num2)
         {
-            if (num1 == num2)
-            {
-                RestoreSpeed();
-            }
-            else
-            {
-                num2 ++;
-            }
+            RestoreSpeed();
+        }
+        else
+        {
+            num2 ++;
         }
 
         Move();
@@ -131,11 +130,7 @@ public class Enemy : MonoBehaviour
         speed = originSpeed;
         isSlowed = false;
     }
-    public void Frozen() {
-        speed = 0;
-        num1 += 3000;
-        isSlowed = true;
-    }
+
     public void Transport() {
         index = 0;
         transform.position = positions[index].position;

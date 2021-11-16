@@ -20,7 +20,6 @@ public class FrozenProp : MonoBehaviour
         if (col.tag == "Enemy")
         {
             GameObject enemy = col.gameObject;
-            enemy.GetComponent<Enemy>().Frozen();
         }
     }
 
