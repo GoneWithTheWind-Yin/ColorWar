@@ -4,7 +4,6 @@ OS: 'Windows 10 Home; OS build 19043.1348; Version 2009; 64bit' Language: 'en' P
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
 COMMAND LINE ARGUMENTS:
-D:\program\Unity\2020.3.17f1\Editor\Unity.exe
 C:\Program Files\Unity\Hub\Editor\2020.3.17f1\Editor\Unity.exe
 -adb2
 -batchMode
@@ -12,12 +11,10 @@ C:\Program Files\Unity\Hub\Editor\2020.3.17f1\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/Lenovo/Documents/GitHub/ColorWar
 C:/Users/Oreo/Desktop/usc/csci526/ColorWar
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-
 54042
 Successfully changed project path to: C:/Users/Oreo/Desktop/usc/csci526/ColorWar
 C:/Users/Oreo/Desktop/usc/csci526/ColorWar
@@ -25,12 +22,9 @@ Using Asset Import Pipeline V2.
 Refreshing native plugins compatible for Editor in 25.69 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.17f1 (a4537701e4ab)
-[Subsystems] Discovering subsystems at path D:/program/Unity/2020.3.17f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/Lenovo/Documents/GitHub/ColorWar/Assets
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.17f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path C:/Users/Oreo/Desktop/usc/csci526/ColorWar/Assets
 GfxDevice: creating device client; threaded=0
-
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
     Renderer: NVIDIA GeForce RTX 3060 Laptop GPU (ID=0x2520)
