@@ -6,6 +6,7 @@ using UnityEngine;
 public class PropData
 {
     public GameObject PropPrefab;
+    public GameObject PropPrefabNoFun;
     public int cost;
     public int CD;
     public float duration;

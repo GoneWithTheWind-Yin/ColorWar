@@ -7,18 +7,17 @@ using UnityEngine;
 
 public class PropManger : MonoBehaviour
 {
-    public PropData FrozenPropData;
     public PropData TransportationPropData;
     private PropData selectedPropData;
     private bool isUse = false;
+    private Transform startposition;
 
     public PropCD TransportationCD;
-    public PropCD FrozenCD;
 
     private void Start()
     {
+        startposition = Waypoints.positions[0];
         TransportationCD.setCD(TransportationPropData.CD);
-        FrozenCD.setCD(FrozenPropData.CD);
     }
 
     void Update()
@@ -35,8 +34,7 @@ public class PropManger : MonoBehaviour
                 {
                     if (GetComponent<GameManage>().GetMoney() >= selectedPropData.cost)
                     {
-                        if(selectedPropData == FrozenPropData) UseFrozenProp(hit.point);
-                        else if (selectedPropData == TransportationPropData) UseTransportationProp(hit.point);
+                        if (selectedPropData == TransportationPropData) UseTransportationProp(hit.point);
 
                         GetComponent<GameManage>().DeductMoney(selectedPropData.cost);
                     }
@@ -50,15 +48,6 @@ public class PropManger : MonoBehaviour
         }
 
     }
-    public void OnFrozenSelected()
-    {
-        if (FrozenCD.canUsed())
-        {
-            isUse = true;
-            selectedPropData = FrozenPropData;
-            FrozenCD.skillUsed();
-        }
-    }
 
     public void OnTransportationSelected()
     {
@@ -69,13 +58,12 @@ public class PropManger : MonoBehaviour
         }
     }
 
-    void UseFrozenProp(Vector3 position) {
-        GameObject prop =  Instantiate(selectedPropData.PropPrefab, position, Quaternion.identity);
-        prop.GetComponent<FrozenProp>().setPropData(selectedPropData);
-    }
     void UseTransportationProp(Vector3 position)
     {
         GameObject prop = Instantiate(selectedPropData.PropPrefab, position, Quaternion.identity);
+        GameObject prop2 = Instantiate(selectedPropData.PropPrefabNoFun, startposition.position, Quaternion.identity);
+
         prop.GetComponent<TransportationProp>().setPropData(selectedPropData);
+        prop2.GetComponent<TransportationNoFun>().setPropData(selectedPropData);
     }
 }

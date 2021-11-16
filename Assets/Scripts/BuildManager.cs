@@ -140,6 +140,7 @@ public class BuildManager : MonoBehaviour
     {
         //Debug.Log("OnDe");
         selectedMapCube.DestroyTurret();
+        Debug.Log("destroy turret");
         GetComponent<GameManage>().EarnMoney(selectedTurretData.cost / 2 );
         StartCoroutine(HideDestroyUI());
     }
