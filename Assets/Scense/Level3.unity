@@ -4103,7 +4103,35 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1725923760698971381, guid: 3a26c5cc2e5b0474f8cdb1a7f8dede08, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1725923760698971381, guid: 3a26c5cc2e5b0474f8cdb1a7f8dede08, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1725923760698971381, guid: 3a26c5cc2e5b0474f8cdb1a7f8dede08, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2050873233}
+    - target: {fileID: 1725923760698971381, guid: 3a26c5cc2e5b0474f8cdb1a7f8dede08, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1725923760698971381, guid: 3a26c5cc2e5b0474f8cdb1a7f8dede08, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnDestroyButtonDown
+      objectReference: {fileID: 0}
+    - target: {fileID: 1725923760698971381, guid: 3a26c5cc2e5b0474f8cdb1a7f8dede08, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1725923760698971381, guid: 3a26c5cc2e5b0474f8cdb1a7f8dede08, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: BuildManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1725923760698971381, guid: 3a26c5cc2e5b0474f8cdb1a7f8dede08, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1725923761675656008, guid: 3a26c5cc2e5b0474f8cdb1a7f8dede08, type: 3}
