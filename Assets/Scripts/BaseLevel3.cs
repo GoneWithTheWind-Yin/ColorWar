@@ -17,6 +17,7 @@ public class BaseLevel3 : Base
         {
             timer -= colorChangeInterval;
             //UpdateColor();
+
         }
     }
 

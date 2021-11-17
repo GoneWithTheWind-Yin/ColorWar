@@ -2125,12 +2125,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 1458496306}
   - {fileID: 2053623293}
   - {fileID: 729024509}
   - {fileID: 876126875}
   - {fileID: 427822108}
   - {fileID: 1766250004}
+  - {fileID: 1458496306}
   - {fileID: 609451707}
   m_Father: {fileID: 0}
   m_RootOrder: 10
@@ -3496,7 +3496,7 @@ RectTransform:
   - {fileID: 1405809434}
   - {fileID: 1084770231}
   m_Father: {fileID: 247391938}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -4102,6 +4102,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1725923760496901656, guid: 3a26c5cc2e5b0474f8cdb1a7f8dede08, type: 3}
+      propertyPath: m_Color.b
+      value: 0.9716981
+      objectReference: {fileID: 0}
+    - target: {fileID: 1725923760496901656, guid: 3a26c5cc2e5b0474f8cdb1a7f8dede08, type: 3}
+      propertyPath: m_Color.g
+      value: 0.9716981
+      objectReference: {fileID: 0}
+    - target: {fileID: 1725923760496901656, guid: 3a26c5cc2e5b0474f8cdb1a7f8dede08, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9716981
+      objectReference: {fileID: 0}
+    - target: {fileID: 1725923760496901662, guid: 3a26c5cc2e5b0474f8cdb1a7f8dede08, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1725923760496901662, guid: 3a26c5cc2e5b0474f8cdb1a7f8dede08, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1725923760698971275, guid: 3a26c5cc2e5b0474f8cdb1a7f8dede08, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1725923760698971380, guid: 3a26c5cc2e5b0474f8cdb1a7f8dede08, type: 3}
+      propertyPath: m_Color.b
+      value: 0.10980393
+      objectReference: {fileID: 0}
+    - target: {fileID: 1725923760698971380, guid: 3a26c5cc2e5b0474f8cdb1a7f8dede08, type: 3}
+      propertyPath: m_Color.g
+      value: 0.15989503
+      objectReference: {fileID: 0}
+    - target: {fileID: 1725923760698971380, guid: 3a26c5cc2e5b0474f8cdb1a7f8dede08, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8117647
+      objectReference: {fileID: 0}
     - target: {fileID: 1725923760698971381, guid: 3a26c5cc2e5b0474f8cdb1a7f8dede08, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -4137,6 +4173,14 @@ PrefabInstance:
     - target: {fileID: 1725923761675656008, guid: 3a26c5cc2e5b0474f8cdb1a7f8dede08, type: 3}
       propertyPath: m_Name
       value: DestroyCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 1725923761675656008, guid: 3a26c5cc2e5b0474f8cdb1a7f8dede08, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1725923761675656008, guid: 3a26c5cc2e5b0474f8cdb1a7f8dede08, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1725923761675656011, guid: 3a26c5cc2e5b0474f8cdb1a7f8dede08, type: 3}
       propertyPath: m_Pivot.x
@@ -5723,7 +5767,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 247391938}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
@@ -6957,7 +7001,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 247391938}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
@@ -12852,7 +12896,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6946597433352832766, guid: 03d4725a541a5fe4a97f4b54c4bf1098, type: 3}
       propertyPath: m_RootOrder
+<<<<<<< Updated upstream
       value: 0
+=======
+      value: 5
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 6946597433697339995, guid: 03d4725a541a5fe4a97f4b54c4bf1098, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -14881,7 +14929,7 @@ RectTransform:
   - {fileID: 519461703}
   - {fileID: 315577957}
   m_Father: {fileID: 247391938}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -17900,7 +17948,7 @@ RectTransform:
   - {fileID: 1261040301}
   - {fileID: 833782841}
   m_Father: {fileID: 247391938}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
