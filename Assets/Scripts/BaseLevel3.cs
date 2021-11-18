@@ -16,7 +16,7 @@ public class BaseLevel3 : Base
         if (timer >= colorChangeInterval)
         {
             timer -= colorChangeInterval;
-            //UpdateColor();
+            UpdateColor();
 
         }
     }
