@@ -7,7 +7,7 @@ public class MapCube : MonoBehaviour
 {
     [HideInInspector]
     public GameObject turretGo;
-    private TurretData turretData;
+    public TurretData turretData;
     public GameObject buildEffect;
 
     private Renderer renderer;
