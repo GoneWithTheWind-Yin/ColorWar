@@ -6,7 +6,7 @@ public class BaseLevel3 : Base
 {
     public Color[] colorArr = new Color[] { Color.yellow, Color.red, Color.green };
     private int index = 0;
-    private int colorChangeInterval = 15;
+    private int colorChangeInterval = 25;
     private float timer = 0;
 
     // Update is called once per frame
