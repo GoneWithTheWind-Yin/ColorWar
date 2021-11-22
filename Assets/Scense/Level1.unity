@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3972,7 +3972,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'HP: 5'
+  m_Text: 'HP: 10'
 --- !u!222 &876126878
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9049,10 +9049,10 @@ MonoBehaviour:
   - enemyPrefab: {fileID: 4409569278764533620, guid: 1bafa47be57a84bf1bc7e2a681082976, type: 3}
     count: 3
     rate: 2
-  - enemyPrefab: {fileID: 4409569278764533620, guid: 2690222ec9687485d9ce43630fc1b2e8, type: 3}
+  - enemyPrefab: {fileID: 4409569278764533620, guid: 1bafa47be57a84bf1bc7e2a681082976, type: 3}
     count: 4
     rate: 2
-  - enemyPrefab: {fileID: 4409569278764533620, guid: 02926b115e3fb4c7c89448406df4e8c9, type: 3}
+  - enemyPrefab: {fileID: 4409569278764533620, guid: 2690222ec9687485d9ce43630fc1b2e8, type: 3}
     count: 5
     rate: 1.8
   START: {fileID: 1852512994}
@@ -9119,7 +9119,7 @@ MonoBehaviour:
   moneyText: {fileID: 729024510}
   hpText: {fileID: 876126877}
   money: 100
-  HP: 5
+  HP: 10
   endUIWin: {fileID: 427822107}
   endUIFail: {fileID: 1461556885}
   endMessage: {fileID: 1595703678}
