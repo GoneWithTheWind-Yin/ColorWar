@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7221,7 +7221,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'HP: 10'
+  m_Text: 'HP: 12'
 --- !u!222 &876126878
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17674,7 +17674,7 @@ MonoBehaviour:
   moneyText: {fileID: 729024510}
   hpText: {fileID: 876126877}
   money: 150
-  HP: 10
+  HP: 12
   endUIWin: {fileID: 427822107}
   endUIFail: {fileID: 1766250003}
   endMessage: {fileID: 1595703678}
