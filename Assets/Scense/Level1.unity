@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9089,15 +9089,15 @@ MonoBehaviour:
     type: 0
   missileTurretData:
     turretPrefab: {fileID: 4361989944778579430, guid: 9bb7fd11ebe0d4daa9cd267576cb8476, type: 3}
-    cost: 70
+    cost: 100
     turretUpgradedPrefab: {fileID: 4361989944778579430, guid: 54e0a206ecc9943fe95c954e112731c5, type: 3}
     costUpgraded: 30
     type: 1
   standardTurretData:
     turretPrefab: {fileID: 5314222728871408805, guid: 8b2d3214399a34028a2541b38798a4b7, type: 3}
-    cost: 20
+    cost: 25
     turretUpgradedPrefab: {fileID: 5314222728871408805, guid: 1216d3e71f80641cfa6a28cadd04c78c, type: 3}
-    costUpgraded: 20
+    costUpgraded: 25
     type: 2
   moneyAnimator: {fileID: 729024512}
   destroyCanvas: {fileID: 902009085}
